@@ -11,7 +11,7 @@ import time
 import dateutil.relativedelta
 
 #%%
-start_date=datetime(2020, 5, 26,18)
+start_date=datetime(2020, 5, 24,15)
 end_date=datetime.now().replace(hour=0, minute=0,second=0, microsecond=0)-timedelta(days=1)
 
 path1 = './data/apicall_minutes/all_days/'
@@ -155,7 +155,7 @@ headers = {'Content-type': 'application/json;charset=utf-8',
 #%%
 for Stunde in datelist_test:
     df_api_stunde = []
-    datelist2 = pd.date_range(Stunde, periods=2, freq='1min')
+    datelist2 = pd.date_range(Stunde, periods=5, freq='1min')
     for date2 in datelist2:
         tagesfilter = date2.replace(hour=0, minute=0, second=0, microsecond=0)
         print(tagesfilter)
